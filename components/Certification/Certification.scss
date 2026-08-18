@@ -1,0 +1,160 @@
+@use "../../app/globals.scss" as *;
+.certifications {
+  padding: 9px 0 17px;
+  background: var(--bg-primary);
+  &__container {
+    @include container-full;
+  }
+
+  &__grid {
+    display: grid;
+
+    grid-template-columns:
+      1fr
+      1fr
+      0.8fr;
+    gap: 10px;
+    margin-top: 8px;
+  }
+}
+
+.cert-card {
+  min-height: 87px;
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  @include card-gradient;
+
+  &__icon {
+    width: 43px;
+    height: 43px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--purple);
+    background:
+      radial-gradient(
+        circle,
+        rgba(91, 33, 182, 0.45),
+        rgba(30, 27, 75, 0.6)
+      );
+
+    border-radius: 50%;
+    svg {
+      font-size: 22px;
+    }
+  }
+  &__content {
+    min-width: 0;
+    h3 {
+      margin: 0 0 3px;
+      color: #f8fafc;
+      font-size: var(--font-body);
+      line-height: 1.3;
+      font-weight: var(--weight-bold);
+    }
+
+    p {
+      margin: 0 0 6px;
+      color: #cbd5e1;
+      font-size: var(--font-small);
+      line-height: 1.3;
+      font-weight: var(--weight-regular);
+    }
+  }
+
+  &__badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 8px;
+    color: #fff;
+    background:
+      linear-gradient(
+        135deg,
+        #6d28d9,
+        #4f46e5
+      );
+
+    border-radius: 4px;
+    font-size: 8px;
+    font-weight: var(--weight-medium);
+    &--progress {
+      background:
+        linear-gradient(
+          135deg,
+          #4c1d95,
+          #4338ca
+        );
+    }
+  }
+}
+.strengths-card {
+  min-height: 87px;
+  padding: 11px 17px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(13, 18, 36, 0.95),
+      rgba(5, 11, 25, 0.95)
+    );
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+
+  h3 {
+    margin: 0 0 5px;
+    color: var(--purple);
+    font-size: var(--font-body);
+    font-weight: var(--weight-semibold);
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    list-style: none;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #e2e8f0;
+    font-size: var(--font-small);
+    line-height: 1.4;
+    font-weight: var(--weight-regular);
+    svg {
+      flex-shrink: 0;
+      color: #d946ef;
+      font-size: 11px;
+    }
+  }
+}
+
+
+@media (max-width: 900px) {
+  .certifications {
+    &__grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    .strengths-card {
+      grid-column: 1 / -1;
+    }
+  }
+}
+@media (max-width: 600px) {
+  .certifications {
+    &__container {
+      width: calc(100% - 30px);
+    }
+    &__grid {
+      grid-template-columns: 1fr;
+    }
+    .strengths-card {
+      grid-column: auto;
+    }
+  }
+}

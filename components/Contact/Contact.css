@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+:root {
+  /* =======================================================
+     BACKGROUND
+  ======================================================= */
+  --bg-primary: #050816;
+  --bg-secondary: #080b1a;
+  /* =======================================================
+     TEXT
+  ======================================================= */
+  --text-primary: #ffffff;
+  --text-secondary: #a7adbd;
+  /* =======================================================
+     BRAND COLORS
+  ======================================================= */
+  --purple: #8b5cf6;
+  --blue: #2563eb;
+  /* =======================================================
+     BORDER
+  ======================================================= */
+  --border: rgba(255, 255, 255, 0.08);
+  --border-purple:
+    rgba(139, 92, 246, 0.55);
+  /* =======================================================
+     TYPOGRAPHY
+  ======================================================= */
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-bold: 600;
+  --weight-extrabold: 800;
+  /* =======================================================
+     COMMON FONT SIZES
+  ======================================================= */
+  --font-xs: 10px;
+  --font-small: 12px;
+  --font-body: 14px;
+  --font-section-title: 25px;
+  /* =======================================================
+     COMMON SPACING
+  ======================================================= */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 12px;
+  --space-lg: 16px;
+  --space-xl: 24px;
+  /* =======================================================
+     COMMON RADIUS
+  ======================================================= */
+  --radius-sm: 5px;
+  --radius-card: 7px;
+  --radius-lg: 12px;
+  /* =======================================================
+     COMMON LAYOUT
+  ======================================================= */
+  --container: 1200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Label Style - Used in 6+ components */
+/* Container Layout - Used in 5+ files */
+/* Card Gradient Background - Used in 3 files */
+/* Hover Smooth Transition */
+/* Text Primary */
+/* Text Secondary */
+/* Section Title */
+/* =========================================================
+   COMMON CONTAINER
+========================================================= */
+.container {
+  width: min(100% - 40px, var(--container));
+  margin: 0 auto;
+}
+
+/* =========================================================
+   COMMON SECTION
+========================================================= */
+section {
+  padding: 100px 0;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+@media (max-width: 768px) {
+  .container {
+    width: min(100% - 30px, var(--container));
+  }
+  section {
+    padding: 70px 0;
+  }
+}
+.contact {
+  width: 100%;
+  background: var(--bg-primary);
+  border-top: 1px solid var(--border);
+}
+.contact__container {
+  width: calc(100% - 76px);
+  max-width: 1420px;
+  min-height: 82px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.35fr 1.05fr 0.85fr;
+  align-items: center;
+  gap: 40px;
+}
+.contact__label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+  color: var(--purple);
+  font-size: var(--font-body);
+  font-weight: var(--weight-bold);
+}
+.contact__label span {
+  width: 10px;
+  height: 10px;
+  background: var(--purple);
+}
+.contact__content h2 {
+  margin: 0 0 4px;
+  color: var(--text-primary);
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: var(--weight-bold);
+}
+.contact__content p {
+  max-width: 400px;
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: var(--font-small);
+  line-height: 1.45;
+  font-weight: var(--weight-regular);
+}
+.contact__details {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.contact__details a,
+.contact__details div {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: #e2e8f0;
+  font-size: var(--font-small);
+  font-weight: var(--weight-regular);
+  text-decoration: none;
+}
+.contact__details svg {
+  flex-shrink: 0;
+  color: var(--purple);
+  font-size: 15px;
+}
+.contact__details a:hover {
+  color: var(--purple);
+}
+.contact__action {
+  display: flex;
+  justify-content: flex-end;
+}
+.contact__action a {
+  width: 215px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  color: var(--purple);
+  border: 1px solid var(--purple);
+  border-radius: var(--radius-card);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: var(--weight-semibold);
+  transition: all 0.25s ease;
+}
+.contact__action a svg {
+  font-size: 17px;
+}
+.contact__action a:hover {
+  background: rgba(124, 58, 237, 0.1);
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.16);
+}
+.contact__footer {
+  min-height: 34px;
+  padding: 0 38px;
+  text-align: center;
+  border-top: 1px solid var(--border);
+  color: #94a3b8;
+  font-size: var(--font-xs);
+}
+
+@media (max-width: 900px) {
+  .contact__container {
+    width: calc(100% - 40px);
+    grid-template-columns: 1fr 1fr;
+    padding: 25px 0;
+  }
+  .contact__action {
+    justify-content: flex-start;
+  }
+}
+@media (max-width: 600px) {
+  .contact__container {
+    width: calc(100% - 30px);
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+  .contact__action {
+    width: 100%;
+  }
+  .contact__action a {
+    width: 100%;
+  }
+}/*# sourceMappingURL=Contact.css.map */

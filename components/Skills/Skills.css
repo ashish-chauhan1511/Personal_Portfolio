@@ -1,0 +1,425 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+:root {
+  /* =======================================================
+     BACKGROUND
+  ======================================================= */
+  --bg-primary: #050816;
+  --bg-secondary: #080b1a;
+  /* =======================================================
+     TEXT
+  ======================================================= */
+  --text-primary: #ffffff;
+  --text-secondary: #a7adbd;
+  /* =======================================================
+     BRAND COLORS
+  ======================================================= */
+  --purple: #8b5cf6;
+  --blue: #2563eb;
+  /* =======================================================
+     BORDER
+  ======================================================= */
+  --border: rgba(255, 255, 255, 0.08);
+  --border-purple:
+    rgba(139, 92, 246, 0.55);
+  /* =======================================================
+     TYPOGRAPHY
+  ======================================================= */
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-bold: 600;
+  --weight-extrabold: 800;
+  /* =======================================================
+     COMMON FONT SIZES
+  ======================================================= */
+  --font-xs: 10px;
+  --font-small: 12px;
+  --font-body: 14px;
+  --font-section-title: 25px;
+  /* =======================================================
+     COMMON SPACING
+  ======================================================= */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 12px;
+  --space-lg: 16px;
+  --space-xl: 24px;
+  /* =======================================================
+     COMMON RADIUS
+  ======================================================= */
+  --radius-sm: 5px;
+  --radius-card: 7px;
+  --radius-lg: 12px;
+  /* =======================================================
+     COMMON LAYOUT
+  ======================================================= */
+  --container: 1200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Label Style - Used in 6+ components */
+/* Container Layout - Used in 5+ files */
+/* Card Gradient Background - Used in 3 files */
+/* Hover Smooth Transition */
+/* Text Primary */
+/* Text Secondary */
+/* Section Title */
+/* =========================================================
+   COMMON CONTAINER
+========================================================= */
+.container {
+  width: min(100% - 40px, var(--container));
+  margin: 0 auto;
+}
+
+/* =========================================================
+   COMMON SECTION
+========================================================= */
+section {
+  padding: 100px 0;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+@media (max-width: 768px) {
+  .container {
+    width: min(100% - 30px, var(--container));
+  }
+  section {
+    padding: 70px 0;
+  }
+}
+.skills {
+  padding: 10px 0 12px;
+  background: var(--bg-primary);
+}
+.skills__container {
+  width: calc(100% - 76px);
+  max-width: var(--container);
+  margin: 0 auto;
+}
+.skills__label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+  color: var(--purple);
+  font-size: var(--font-body);
+  font-weight: var(--weight-bold);
+}
+.skills__label span {
+  width: 10px;
+  height: 10px;
+  background: var(--purple);
+}
+.skills__title {
+  margin: 4px 0 8px;
+  color: var(--text-primary);
+  font-size: var(--font-section-title);
+  line-height: 1.2;
+  font-weight: var(--weight-bold);
+}
+.skills__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.skills-card {
+  min-height: 178px;
+  padding: 12px 14px;
+  background: linear-gradient(145deg, rgba(13, 18, 36, 0.95), rgba(5, 11, 25, 0.95));
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.skills-card:hover {
+  border-color: rgba(139, 92, 246, 0.35);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+}
+.skills-card__heading {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding-bottom: 8px;
+  color: var(--purple-bright);
+  font-size: var(--font-body);
+  font-weight: var(--weight-semibold);
+  border-bottom: 1px solid var(--border);
+}
+.skills-card__icon {
+  color: var(--purple);
+  font-size: 16px;
+  line-height: 1;
+}
+.skills-card__items {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 10px;
+}
+
+.skill-item {
+  min-height: 61px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border-right: 1px solid var(--border);
+  transition: background 0.2s ease;
+}
+.skill-item:nth-child(4n) {
+  border-right: 0;
+}
+.skill-item:nth-child(n+5) {
+  border-top: 1px solid var(--border);
+}
+.skill-item:hover {
+  background: rgba(139, 92, 246, 0.025);
+}
+.skill-item__icon {
+  width: 30px;
+  height: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+}
+.skill-item__icon svg {
+  width: 25px;
+  height: 25px;
+  transition: filter 0.2s ease, transform 0.2s ease;
+}
+.skill-item:hover .skill-item__icon svg {
+  transform: translateY(-1px);
+}
+.skill-item span {
+  color: #e2e8f0;
+  font-size: var(--font-small);
+  font-weight: var(--weight-medium);
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   FRONT END — BRAND COLORS
+========================================================= */
+/* React */
+.skills-card:nth-child(1) .skill-item:nth-child(1) .skill-item__icon {
+  color: #61dafb;
+}
+.skills-card:nth-child(1) {
+  /* Next.js */
+}
+.skills-card:nth-child(1) .skill-item:nth-child(2) .skill-item__icon {
+  color: #ffffff;
+}
+.skills-card:nth-child(1) {
+  /* JavaScript */
+}
+.skills-card:nth-child(1) .skill-item:nth-child(3) .skill-item__icon {
+  color: #f7df1e;
+}
+.skills-card:nth-child(1) {
+  /* TypeScript */
+}
+.skills-card:nth-child(1) .skill-item:nth-child(4) .skill-item__icon {
+  color: #3178c6;
+}
+.skills-card:nth-child(1) {
+  /* HTML5 */
+}
+.skills-card:nth-child(1) .skill-item:nth-child(5) .skill-item__icon {
+  color: #e34f26;
+}
+.skills-card:nth-child(1) {
+  /* CSS3 */
+}
+.skills-card:nth-child(1) .skill-item:nth-child(6) .skill-item__icon {
+  color: #1572b6;
+}
+.skills-card:nth-child(1) {
+  /* SCSS */
+}
+.skills-card:nth-child(1) .skill-item:nth-child(7) .skill-item__icon {
+  color: #cc6699;
+}
+.skills-card:nth-child(1) {
+  /* Tailwind CSS */
+}
+.skills-card:nth-child(1) .skill-item:nth-child(8) .skill-item__icon {
+  color: #38bdf8;
+}
+
+/* =========================================================
+   BACK END — BRAND COLORS
+========================================================= */
+.skills-card:nth-child(2) {
+  /* Node.js */
+}
+.skills-card:nth-child(2) .skill-item:nth-child(1) .skill-item__icon {
+  color: #68a063;
+}
+.skills-card:nth-child(2) {
+  /* Express.js */
+}
+.skills-card:nth-child(2) .skill-item:nth-child(2) .skill-item__icon {
+  color: #f8fafc;
+}
+.skills-card:nth-child(2) {
+  /* REST API */
+}
+.skills-card:nth-child(2) .skill-item:nth-child(3) .skill-item__icon {
+  color: #a78bfa;
+}
+.skills-card:nth-child(2) {
+  /* MongoDB */
+}
+.skills-card:nth-child(2) .skill-item:nth-child(4) .skill-item__icon {
+  color: #47a248;
+}
+.skills-card:nth-child(2) {
+  /* JWT */
+}
+.skills-card:nth-child(2) .skill-item:nth-child(5) .skill-item__icon {
+  color: #d63aff;
+}
+.skills-card:nth-child(2) {
+  /* Mongoose */
+}
+.skills-card:nth-child(2) .skill-item:nth-child(6) .skill-item__icon {
+  color: #880000;
+}
+.skills-card:nth-child(2) {
+  /* Bcrypt */
+}
+.skills-card:nth-child(2) .skill-item:nth-child(7) .skill-item__icon {
+  color: #a855f7;
+}
+.skills-card:nth-child(2) {
+  /* Dotenv */
+}
+.skills-card:nth-child(2) .skill-item:nth-child(8) .skill-item__icon {
+  color: #f8fafc;
+}
+
+/* =========================================================
+   OTHER TOOLS — BRAND COLORS
+========================================================= */
+.skills-card:nth-child(3) {
+  /* Git */
+}
+.skills-card:nth-child(3) .skill-item:nth-child(1) .skill-item__icon {
+  color: #f05032;
+}
+.skills-card:nth-child(3) {
+  /* GitHub */
+}
+.skills-card:nth-child(3) .skill-item:nth-child(2) .skill-item__icon {
+  color: #ffffff;
+}
+.skills-card:nth-child(3) {
+  /* VS Code */
+}
+.skills-card:nth-child(3) .skill-item:nth-child(3) .skill-item__icon {
+  color: #007acc;
+}
+.skills-card:nth-child(3) {
+  /* Thunder Client */
+}
+.skills-card:nth-child(3) .skill-item:nth-child(4) .skill-item__icon {
+  color: #a855f7;
+}
+.skills-card:nth-child(3) {
+  /* Vercel */
+}
+.skills-card:nth-child(3) .skill-item:nth-child(5) .skill-item__icon {
+  color: #ffffff;
+}
+.skills-card:nth-child(3) {
+  /* Postman */
+}
+.skills-card:nth-child(3) .skill-item:nth-child(6) .skill-item__icon {
+  color: #ff6c37;
+}
+.skills-card:nth-child(3) {
+  /* ESLint */
+}
+.skills-card:nth-child(3) .skill-item:nth-child(7) .skill-item__icon {
+  color: #8b5cf6;
+}
+.skills-card:nth-child(3) {
+  /* NPM */
+}
+.skills-card:nth-child(3) .skill-item:nth-child(8) .skill-item__icon {
+  color: #cb3837;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+@media (max-width: 950px) {
+  .skills__grid {
+    grid-template-columns: 1fr;
+  }
+  .skills .skills-card {
+    min-height: auto;
+  }
+}
+@media (max-width: 500px) {
+  .skills__container {
+    width: calc(100% - 30px);
+  }
+  .skills__title {
+    font-size: 20px;
+  }
+  .skills-card__items {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .skill-item span {
+    font-size: 7px;
+  }
+  .skill-item__icon svg {
+    width: 23px;
+    height: 23px;
+  }
+}/*# sourceMappingURL=Skills.css.map */

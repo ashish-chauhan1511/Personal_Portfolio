@@ -1,0 +1,349 @@
+@use "../../app/globals.scss" as *;
+
+.skills {
+  padding: 10px 0 12px;
+  background: var(--bg-primary);
+  &__container {
+    @include container-full;
+  }
+  &__label {
+    @include section-label;
+  }
+  &__title {
+    margin: 4px 0 8px;
+    @include section-title;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+    gap: 10px;
+  }
+}
+.skills-card {
+  min-height: 178px;
+  padding: 12px 14px;
+  @include card-gradient;
+  &:hover {
+    border-color:
+      rgba(139, 92, 246, 0.35);
+    box-shadow:
+      0 8px 25px
+      rgba(0, 0, 0, 0.18);
+  }
+  &__heading {
+    @include flex-row;
+    gap: 9px;
+    padding-bottom: 8px;
+    color: var(--purple-bright);
+    font-size: var(--font-body);
+    font-weight: var(--weight-semibold);
+    border-bottom:
+      1px solid var(--border);
+  }
+  &__icon {
+    color: var(--purple);
+    font-size: 16px;
+    line-height: 1;
+  }
+  &__items {
+    display: grid;
+    grid-template-columns:
+      repeat(4, minmax(0, 1fr));
+    margin-top: 10px;
+  }
+}
+.skill-item {
+  min-height: 61px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border-right:
+    1px solid var(--border);
+  transition:
+    background 0.2s ease;
+  &:nth-child(4n) {
+    border-right: 0;
+  }
+  &:nth-child(n + 5) {
+    border-top:
+      1px solid var(--border);
+  }
+  &:hover {
+    background:
+      rgba(139, 92, 246, 0.025);
+  }
+
+  &__icon {
+    width: 30px;
+    height: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    svg {
+      width: 25px;
+      height: 25px;
+      transition:
+        filter 0.2s ease,
+        transform 0.2s ease;
+    }
+  }
+  &:hover &__icon svg {
+    transform:
+      translateY(-1px);
+  }
+  span {
+    color: #e2e8f0;
+    font-size: var(--font-small);
+    font-weight: var(--weight-medium);
+    text-align: center;
+    white-space: nowrap;
+  }
+}
+/* =========================================================
+   FRONT END — BRAND COLORS
+========================================================= */
+/* React */
+.skills-card:nth-child(1) {
+  .skill-item:nth-child(1) {
+    .skill-item__icon {
+      color: #61dafb;
+    }
+  }
+
+  /* Next.js */
+  .skill-item:nth-child(2) {
+    .skill-item__icon {
+      color: #ffffff;
+    }
+  }
+
+  /* JavaScript */
+  .skill-item:nth-child(3) {
+    .skill-item__icon {
+      color: #f7df1e;
+    }
+  }
+
+  /* TypeScript */
+  .skill-item:nth-child(4) {
+    .skill-item__icon {
+      color: #3178c6;
+    }
+  }
+
+  /* HTML5 */
+  .skill-item:nth-child(5) {
+    .skill-item__icon {
+      color: #e34f26;
+    }
+  }
+
+  /* CSS3 */
+  .skill-item:nth-child(6) {
+    .skill-item__icon {
+      color: #1572b6;
+    }
+  }
+
+  /* SCSS */
+  .skill-item:nth-child(7) {
+    .skill-item__icon {
+      color: #cc6699;
+    }
+  }
+
+  /* Tailwind CSS */
+  .skill-item:nth-child(8) {
+    .skill-item__icon {
+      color: #38bdf8;
+    }
+  }
+}
+
+
+/* =========================================================
+   BACK END — BRAND COLORS
+========================================================= */
+
+.skills-card:nth-child(2) {
+
+  /* Node.js */
+  .skill-item:nth-child(1) {
+    .skill-item__icon {
+      color: #68a063;
+    }
+  }
+
+  /* Express.js */
+  .skill-item:nth-child(2) {
+    .skill-item__icon {
+      color: #f8fafc;
+    }
+  }
+
+  /* REST API */
+  .skill-item:nth-child(3) {
+    .skill-item__icon {
+      color: #a78bfa;
+    }
+  }
+
+  /* MongoDB */
+  .skill-item:nth-child(4) {
+    .skill-item__icon {
+      color: #47a248;
+    }
+  }
+
+  /* JWT */
+  .skill-item:nth-child(5) {
+    .skill-item__icon {
+      color: #d63aff;
+    }
+  }
+
+  /* Mongoose */
+  .skill-item:nth-child(6) {
+    .skill-item__icon {
+      color: #880000;
+    }
+  }
+
+  /* Bcrypt */
+  .skill-item:nth-child(7) {
+    .skill-item__icon {
+      color: #a855f7;
+    }
+  }
+
+  /* Dotenv */
+  .skill-item:nth-child(8) {
+    .skill-item__icon {
+      color: #f8fafc;
+    }
+  }
+}
+
+
+/* =========================================================
+   OTHER TOOLS — BRAND COLORS
+========================================================= */
+
+.skills-card:nth-child(3) {
+
+  /* Git */
+  .skill-item:nth-child(1) {
+    .skill-item__icon {
+      color: #f05032;
+    }
+  }
+
+  /* GitHub */
+  .skill-item:nth-child(2) {
+    .skill-item__icon {
+      color: #ffffff;
+    }
+  }
+
+  /* VS Code */
+  .skill-item:nth-child(3) {
+    .skill-item__icon {
+      color: #007acc;
+    }
+  }
+
+  /* Thunder Client */
+  .skill-item:nth-child(4) {
+    .skill-item__icon {
+      color: #a855f7;
+    }
+  }
+
+  /* Vercel */
+  .skill-item:nth-child(5) {
+    .skill-item__icon {
+      color: #ffffff;
+    }
+  }
+
+  /* Postman */
+  .skill-item:nth-child(6) {
+    .skill-item__icon {
+      color: #ff6c37;
+    }
+  }
+
+  /* ESLint */
+  .skill-item:nth-child(7) {
+    .skill-item__icon {
+      color: #8b5cf6;
+    }
+  }
+
+  /* NPM */
+  .skill-item:nth-child(8) {
+    .skill-item__icon {
+      color: #cb3837;
+    }
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 950px) {
+  .skills {
+
+    &__grid {
+      grid-template-columns: 1fr;
+    }
+
+    .skills-card {
+      min-height: auto;
+    }
+  }
+}
+
+
+@media (max-width: 500px) {
+  .skills {
+
+    &__container {
+      width: calc(100% - 30px);
+    }
+
+    &__title {
+      font-size: 20px;
+    }
+  }
+
+  .skills-card {
+
+    &__items {
+      grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+    }
+  }
+
+  .skill-item {
+
+    span {
+      font-size: 7px;
+    }
+
+    &__icon {
+
+      svg {
+        width: 23px;
+        height: 23px;
+      }
+    }
+  }
+}

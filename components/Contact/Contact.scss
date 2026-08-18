@@ -1,0 +1,151 @@
+@use "../../app/globals.scss" as *;
+
+.contact {
+  width: 100%;
+  background: var(--bg-primary);
+  border-top:
+  1px solid var(--border);
+  &__container {
+    width: calc(100% - 76px);
+    max-width: 1420px;
+
+    min-height: 82px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+      1.35fr
+      1.05fr
+      0.85fr;
+
+    align-items: center;
+    gap: 40px;
+  }
+  &__label {
+    @include section-label;
+  }
+
+  &__content {
+
+    h2 {
+      margin: 0 0 4px;
+      color: var(--text-primary);
+      font-size: 20px;
+      line-height: 1.2;
+      font-weight: var(--weight-bold);
+    }
+
+    p {
+      max-width: 400px;
+      margin: 0;
+      color: var(--text-secondary);
+      font-size: var(--font-small);
+      line-height: 1.45;
+      font-weight: var(--weight-regular);
+    }
+  }
+  &__details {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    a,
+    div {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      color: #e2e8f0;
+      font-size: var(--font-small);
+      font-weight: var(--weight-regular);
+      text-decoration: none;
+    }
+
+    svg {
+      flex-shrink: 0;
+      color: var(--purple);
+      font-size: 15px;
+    }
+
+    a:hover {
+      color: var(--purple);
+    }
+  }
+
+  &__action {
+    display: flex;
+    justify-content: flex-end;
+    a {
+      width: 215px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 15px;
+      color: var(--purple);
+      border:
+      1px solid var(--purple);
+      border-radius: var(--radius-card);
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: var(--weight-semibold);
+      transition: all 0.25s ease;
+      svg {
+        font-size: 17px;
+      }
+
+      &:hover {
+        background:
+          rgba(124, 58, 237, 0.1);
+
+        box-shadow:
+          0 0 20px
+          rgba(124, 58, 237, 0.16);
+      }
+    }
+  }
+
+  &__footer {
+    min-height: 34px;
+    padding: 0 38px;
+    text-align: center;
+    border-top:
+      1px solid var(--border);
+    color: #94a3b8;
+    font-size: var(--font-xs);
+  }
+}
+
+@media (max-width: 900px) {
+  .contact {
+    &__container {
+      width: calc(100% - 40px);
+      grid-template-columns:
+        1fr 1fr;
+      padding: 25px 0;
+    }
+
+    &__action {
+      justify-content: flex-start;
+    }
+
+  }
+}
+
+@media (max-width: 600px) {
+  .contact {
+
+    &__container {
+      width: calc(100% - 30px);
+      grid-template-columns: 1fr;
+      gap: 22px;
+    }
+
+    &__action {
+      width: 100%;
+      a {
+        width: 100%;
+      }
+    }
+  }
+}

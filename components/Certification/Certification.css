@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+:root {
+  /* =======================================================
+     BACKGROUND
+  ======================================================= */
+  --bg-primary: #050816;
+  --bg-secondary: #080b1a;
+  /* =======================================================
+     TEXT
+  ======================================================= */
+  --text-primary: #ffffff;
+  --text-secondary: #a7adbd;
+  /* =======================================================
+     BRAND COLORS
+  ======================================================= */
+  --purple: #8b5cf6;
+  --blue: #2563eb;
+  /* =======================================================
+     BORDER
+  ======================================================= */
+  --border: rgba(255, 255, 255, 0.08);
+  --border-purple:
+    rgba(139, 92, 246, 0.55);
+  /* =======================================================
+     TYPOGRAPHY
+  ======================================================= */
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-bold: 600;
+  --weight-extrabold: 800;
+  /* =======================================================
+     COMMON FONT SIZES
+  ======================================================= */
+  --font-xs: 10px;
+  --font-small: 12px;
+  --font-body: 14px;
+  --font-section-title: 25px;
+  /* =======================================================
+     COMMON SPACING
+  ======================================================= */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 12px;
+  --space-lg: 16px;
+  --space-xl: 24px;
+  /* =======================================================
+     COMMON RADIUS
+  ======================================================= */
+  --radius-sm: 5px;
+  --radius-card: 7px;
+  --radius-lg: 12px;
+  /* =======================================================
+     COMMON LAYOUT
+  ======================================================= */
+  --container: 1200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Label Style - Used in 6+ components */
+/* Container Layout - Used in 5+ files */
+/* Card Gradient Background - Used in 3 files */
+/* Hover Smooth Transition */
+/* Text Primary */
+/* Text Secondary */
+/* Section Title */
+/* =========================================================
+   COMMON CONTAINER
+========================================================= */
+.container {
+  width: min(100% - 40px, var(--container));
+  margin: 0 auto;
+}
+
+/* =========================================================
+   COMMON SECTION
+========================================================= */
+section {
+  padding: 100px 0;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+@media (max-width: 768px) {
+  .container {
+    width: min(100% - 30px, var(--container));
+  }
+  section {
+    padding: 70px 0;
+  }
+}
+.certifications {
+  padding: 9px 0 17px;
+  background: var(--bg-primary);
+}
+.certifications__container {
+  width: calc(100% - 76px);
+  max-width: var(--container);
+  margin: 0 auto;
+}
+.certifications__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.8fr;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.cert-card {
+  min-height: 87px;
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: linear-gradient(145deg, rgba(13, 18, 36, 0.95), rgba(5, 11, 25, 0.95));
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.cert-card__icon {
+  width: 43px;
+  height: 43px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--purple);
+  background: radial-gradient(circle, rgba(91, 33, 182, 0.45), rgba(30, 27, 75, 0.6));
+  border-radius: 50%;
+}
+.cert-card__icon svg {
+  font-size: 22px;
+}
+.cert-card__content {
+  min-width: 0;
+}
+.cert-card__content h3 {
+  margin: 0 0 3px;
+  color: #f8fafc;
+  font-size: var(--font-body);
+  line-height: 1.3;
+  font-weight: var(--weight-bold);
+}
+.cert-card__content p {
+  margin: 0 0 6px;
+  color: #cbd5e1;
+  font-size: var(--font-small);
+  line-height: 1.3;
+  font-weight: var(--weight-regular);
+}
+.cert-card__badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 8px;
+  color: #fff;
+  background: linear-gradient(135deg, #6d28d9, #4f46e5);
+  border-radius: 4px;
+  font-size: 8px;
+  font-weight: var(--weight-medium);
+}
+.cert-card__badge--progress {
+  background: linear-gradient(135deg, #4c1d95, #4338ca);
+}
+
+.strengths-card {
+  min-height: 87px;
+  padding: 11px 17px;
+  background: linear-gradient(145deg, rgba(13, 18, 36, 0.95), rgba(5, 11, 25, 0.95));
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+}
+.strengths-card h3 {
+  margin: 0 0 5px;
+  color: var(--purple);
+  font-size: var(--font-body);
+  font-weight: var(--weight-semibold);
+}
+.strengths-card ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  list-style: none;
+}
+.strengths-card li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #e2e8f0;
+  font-size: var(--font-small);
+  line-height: 1.4;
+  font-weight: var(--weight-regular);
+}
+.strengths-card li svg {
+  flex-shrink: 0;
+  color: #d946ef;
+  font-size: 11px;
+}
+
+@media (max-width: 900px) {
+  .certifications__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .certifications .strengths-card {
+    grid-column: 1/-1;
+  }
+}
+@media (max-width: 600px) {
+  .certifications__container {
+    width: calc(100% - 30px);
+  }
+  .certifications__grid {
+    grid-template-columns: 1fr;
+  }
+  .certifications .strengths-card {
+    grid-column: auto;
+  }
+}/*# sourceMappingURL=Certification.css.map */

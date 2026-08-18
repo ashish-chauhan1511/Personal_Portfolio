@@ -1,0 +1,301 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+:root {
+  /* =======================================================
+     BACKGROUND
+  ======================================================= */
+  --bg-primary: #050816;
+  --bg-secondary: #080b1a;
+  /* =======================================================
+     TEXT
+  ======================================================= */
+  --text-primary: #ffffff;
+  --text-secondary: #a7adbd;
+  /* =======================================================
+     BRAND COLORS
+  ======================================================= */
+  --purple: #8b5cf6;
+  --blue: #2563eb;
+  /* =======================================================
+     BORDER
+  ======================================================= */
+  --border: rgba(255, 255, 255, 0.08);
+  --border-purple:
+    rgba(139, 92, 246, 0.55);
+  /* =======================================================
+     TYPOGRAPHY
+  ======================================================= */
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-bold: 600;
+  --weight-extrabold: 800;
+  /* =======================================================
+     COMMON FONT SIZES
+  ======================================================= */
+  --font-xs: 10px;
+  --font-small: 12px;
+  --font-body: 14px;
+  --font-section-title: 25px;
+  /* =======================================================
+     COMMON SPACING
+  ======================================================= */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 12px;
+  --space-lg: 16px;
+  --space-xl: 24px;
+  /* =======================================================
+     COMMON RADIUS
+  ======================================================= */
+  --radius-sm: 5px;
+  --radius-card: 7px;
+  --radius-lg: 12px;
+  /* =======================================================
+     COMMON LAYOUT
+  ======================================================= */
+  --container: 1200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Label Style - Used in 6+ components */
+/* Container Layout - Used in 5+ files */
+/* Card Gradient Background - Used in 3 files */
+/* Hover Smooth Transition */
+/* Text Primary */
+/* Text Secondary */
+/* Section Title */
+/* =========================================================
+   COMMON CONTAINER
+========================================================= */
+.container {
+  width: min(100% - 40px, var(--container));
+  margin: 0 auto;
+}
+
+/* =========================================================
+   COMMON SECTION
+========================================================= */
+section {
+  padding: 100px 0;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+@media (max-width: 768px) {
+  .container {
+    width: min(100% - 30px, var(--container));
+  }
+  section {
+    padding: 70px 0;
+  }
+}
+.projects {
+  width: 100%;
+  padding: 24px 0 8px;
+  background: var(--bg-primary);
+}
+.projects__container {
+  width: calc(100% - 76px);
+  max-width: 1420px;
+  margin: 0 auto;
+}
+.projects__heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.projects__heading h2 {
+  margin: 4px 0 0;
+  color: var(--text-primary);
+  font-size: var(--font-section-title);
+  line-height: 1.2;
+  font-weight: var(--weight-bold);
+}
+.projects__label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+  color: var(--purple);
+  font-size: var(--font-body);
+  font-weight: var(--weight-bold);
+}
+.projects__label span {
+  width: 10px;
+  height: 10px;
+  background: var(--purple);
+}
+.projects__view-all {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--purple);
+  font-size: 12px;
+  font-weight: var(--weight-bold);
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+.projects__view-all svg {
+  font-size: 16px;
+}
+.projects__view-all:hover {
+  color: var(--purple);
+  gap: 12px;
+}
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.project-card {
+  overflow: hidden;
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.95), rgba(2, 6, 23, 0.95));
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: var(--radius-card);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.project-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(139, 92, 246, 0.55);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+.project-card__image {
+  height: 87px;
+  position: relative;
+  overflow: hidden;
+  background: #f8fafc;
+  border-bottom: 1px solid var(--border);
+}
+.project-card__image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.35s ease;
+}
+.project-card:hover .project-card__image img {
+  transform: scale(1.025);
+}
+.project-card__external {
+  width: 27px;
+  height: 27px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  background: rgba(2, 6, 23, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 4px;
+  backdrop-filter: blur(5px);
+  text-decoration: none;
+}
+.project-card__external svg {
+  font-size: 14px;
+}
+.project-card__external:hover {
+  color: var(--purple);
+  border-color: var(--purple);
+}
+.project-card__body {
+  padding: 9px 11px 10px;
+}
+.project-card__body h3 {
+  margin: 0 0 4px;
+  color: var(--text-primary);
+  font-size: 13px;
+  font-weight: var(--weight-bold);
+}
+.project-card__body p {
+  margin: 0 0 9px;
+  color: var(--text-secondary);
+  font-size: var(--font-body);
+  line-height: 1.45;
+  font-weight: var(--weight-regular);
+}
+.project-card__tags {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.project-card__tags span {
+  padding: 3px 8px;
+  color: #e2e8f0;
+  border: 1px solid #64748b;
+  border-radius: 4px;
+  font-size: var(--font-xs);
+  line-height: 1;
+  font-weight: var(--weight-regular);
+  white-space: nowrap;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+@media (max-width: 900px) {
+  .projects__container {
+    width: calc(100% - 40px);
+  }
+  .projects__grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* =========================================================
+   MOBILE
+========================================================= */
+@media (max-width: 600px) {
+  .projects__container {
+    width: calc(100% - 30px);
+  }
+  .projects__heading {
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .projects__view-all {
+    margin-top: 20px;
+  }
+}/*# sourceMappingURL=Projects.css.map */

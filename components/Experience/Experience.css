@@ -1,0 +1,329 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+:root {
+  /* =======================================================
+     BACKGROUND
+  ======================================================= */
+  --bg-primary: #050816;
+  --bg-secondary: #080b1a;
+  /* =======================================================
+     TEXT
+  ======================================================= */
+  --text-primary: #ffffff;
+  --text-secondary: #a7adbd;
+  /* =======================================================
+     BRAND COLORS
+  ======================================================= */
+  --purple: #8b5cf6;
+  --blue: #2563eb;
+  /* =======================================================
+     BORDER
+  ======================================================= */
+  --border: rgba(255, 255, 255, 0.08);
+  --border-purple:
+    rgba(139, 92, 246, 0.55);
+  /* =======================================================
+     TYPOGRAPHY
+  ======================================================= */
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-bold: 600;
+  --weight-extrabold: 800;
+  /* =======================================================
+     COMMON FONT SIZES
+  ======================================================= */
+  --font-xs: 10px;
+  --font-small: 12px;
+  --font-body: 14px;
+  --font-section-title: 25px;
+  /* =======================================================
+     COMMON SPACING
+  ======================================================= */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 12px;
+  --space-lg: 16px;
+  --space-xl: 24px;
+  /* =======================================================
+     COMMON RADIUS
+  ======================================================= */
+  --radius-sm: 5px;
+  --radius-card: 7px;
+  --radius-lg: 12px;
+  /* =======================================================
+     COMMON LAYOUT
+  ======================================================= */
+  --container: 1200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Label Style - Used in 6+ components */
+/* Container Layout - Used in 5+ files */
+/* Card Gradient Background - Used in 3 files */
+/* Hover Smooth Transition */
+/* Text Primary */
+/* Text Secondary */
+/* Section Title */
+/* =========================================================
+   COMMON CONTAINER
+========================================================= */
+.container {
+  width: min(100% - 40px, var(--container));
+  margin: 0 auto;
+}
+
+/* =========================================================
+   COMMON SECTION
+========================================================= */
+section {
+  padding: 100px 0;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+@media (max-width: 768px) {
+  .container {
+    width: min(100% - 30px, var(--container));
+  }
+  section {
+    padding: 70px 0;
+  }
+}
+.experience {
+  padding: 10px 0 14px;
+  background: var(--bg-primary);
+}
+.experience__container {
+  width: calc(100% - 76px);
+  max-width: var(--container);
+  margin: 0 auto;
+}
+.experience__label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+  color: var(--purple);
+  font-size: var(--font-body);
+  font-weight: var(--weight-bold);
+}
+.experience__label span {
+  width: 10px;
+  height: 10px;
+  background: var(--purple);
+}
+.experience__title {
+  margin: 4px 0 10px;
+  color: var(--text-primary);
+  font-size: var(--font-section-title);
+  line-height: 1.2;
+  font-weight: var(--weight-bold);
+}
+.experience__timeline {
+  display: grid;
+  grid-template-columns: 255px minmax(0, 1fr);
+  align-items: stretch;
+  min-height: 158px;
+}
+.experience__date {
+  position: relative;
+  min-height: 158px;
+  padding-left: 82px;
+  display: flex;
+  align-items: flex-start;
+}
+.experience__date::after {
+  content: "";
+  position: absolute;
+  left: 48px;
+  top: 28px;
+  bottom: 0;
+  width: 1px;
+  background: #e2e8f0;
+  opacity: 0.95;
+}
+.experience__timeline-dot {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 38px;
+  top: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-secondary);
+  border: 2px solid var(--purple);
+  border-radius: 50%;
+  z-index: 2;
+  box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.12), 0 0 12px rgba(139, 92, 246, 0.35);
+}
+.experience__timeline-dot svg {
+  display: none;
+}
+.experience__date-text {
+  color: var(--purple);
+  z-index: 3;
+  padding-top: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  white-space: nowrap;
+}
+.experience__date-text span {
+  color: var(--purple);
+  font-size: var(--font-body);
+  line-height: 1.2;
+  font-weight: var(--weight-semibold);
+}
+.experience__date-text small {
+  color: #e2e8f0;
+  font-size: var(--font-body);
+  line-height: 1.3;
+  font-weight: var(--weight-regular);
+}
+
+.experience-card {
+  min-height: 158px;
+  padding: 13px 20px;
+  background: linear-gradient(145deg, rgba(13, 18, 36, 0.96), rgba(5, 11, 25, 0.96));
+  border: 1px solid rgba(139, 92, 246, 0.65);
+  border-radius: var(--radius-card);
+}
+.experience-card h3 {
+  margin: 0 0 2px;
+  color: #f8fafc;
+  font-size: var(--font-xl);
+  line-height: 1.3;
+  font-weight: var(--weight-bold);
+}
+.experience-card__company {
+  margin-bottom: 7px;
+  color: var(--purple);
+  font-size: var(--font-body);
+  line-height: 1.3;
+  font-weight: var(--weight-medium);
+}
+.experience-card ul {
+  margin: 0;
+  padding-left: 14px;
+}
+.experience-card li {
+  margin-bottom: 3px;
+  color: #e2e8f0;
+  font-size: var(--font-body);
+  line-height: 1.45;
+}
+.experience-card li:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  .experience__timeline {
+    grid-template-columns: 210px minmax(0, 1fr);
+  }
+  .experience__date {
+    padding-left: 68px;
+  }
+  .experience__date::after {
+    left: 38px;
+  }
+  .experience__timeline-dot {
+    left: 28px;
+  }
+}
+@media (max-width: 700px) {
+  .experience__container {
+    width: calc(100% - 30px);
+  }
+  .experience__title {
+    font-size: 20px;
+  }
+  .experience__timeline {
+    display: block;
+    min-height: auto;
+  }
+  .experience {
+    /*
+      Mobile date remains above card.
+    */
+  }
+  .experience__date {
+    min-height: 43px;
+    padding-left: 35px;
+    align-items: flex-start;
+  }
+  .experience__date::after {
+    display: none;
+  }
+  .experience__timeline-dot {
+    left: 0;
+    top: 2px;
+  }
+  .experience__date-text {
+    padding-top: 5px;
+    gap: 4px;
+  }
+  .experience .experience-card {
+    min-height: auto;
+    padding: 14px;
+  }
+}
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+@media (max-width: 450px) {
+  .experience__date-text span {
+    font-size: 10px;
+  }
+  .experience__date-text small {
+    font-size: 10px;
+  }
+  .experience .experience-card h3 {
+    font-size: 13px;
+  }
+  .experience .experience-card__company {
+    font-size: 10px;
+  }
+  .experience .experience-card li {
+    font-size: 8.5px;
+  }
+}/*# sourceMappingURL=Experience.css.map */
