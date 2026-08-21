@@ -40,32 +40,32 @@ const Experience = () => {
           <div className="experience-card">
 
             <h3>
-              Frontend Developer
+              Full-Stalk Developer
             </h3>
 
             <div className="experience-card__company">
-              Source Tech - Mumbai, Maharashtra
+              Source Tech-i Mumbai, Maharashtra
             </div>
 
             <ul>
               <li>
-                Developing responsive and interactive web interfaces using React.js and modern JavaScript (ES6+).
+               Developing responsive and scalable web applications using React.js, Next.js, and modern JavaScript (ES6+).
               </li>
 
               <li>
-                Building and integrating RESTful APIs to connect frontend applications with backend services.
+               Designing and integrating RESTful APIs using Node.js and Express.js for seamless frontend-backend communication.
               </li>
 
               <li>
-                Developing full-stack features using Node.js, Express.js and MongoDB within the MERN stack.
+              Developing full-stack features with Next.js, Node.js, Express.js, and MongoDB across the MERN stack.
               </li>
 
               <li>
-                Creating reusable React components and writing clean, scalable and maintainable code.
+               Building reusable React components and maintaining clean, scalable, and maintainable application architecture.
               </li>
 
               <li>
-                Collaborating with team members using Git and GitHub while following version control and development best practices.
+               Collaborating with development teams using Git and GitHub while following industry-standard development practices.
               </li>
             </ul>
 

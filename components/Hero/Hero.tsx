@@ -23,7 +23,7 @@ const Hero = () => {
           </h1>
 
           <h2 className="hero__role">
-            MERN & Next.js Developer
+          Full-Stack Developer
           </h2>
 
           <p className="hero__description">
