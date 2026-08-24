@@ -40,7 +40,7 @@ const Experience = () => {
           <div className="experience-card">
 
             <h3>
-              Full-Stalk Developer
+              Full-Stack Developer
             </h3>
 
             <div className="experience-card__company">
