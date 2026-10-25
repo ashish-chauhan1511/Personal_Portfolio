@@ -62,7 +62,7 @@ export default function About() {
         <div className="about__visual">
           <div className="about__image-box">
             <Image
-              src="/images/profile/ashish1.png"
+              src="/images/profile/ashish1.webp"
               alt="Ashish Chauhan - MERN Developer"
               width={600}
               height={650}

@@ -86,7 +86,7 @@ const Hero = () => {
           <div className="hero__image-wrapper">
             <div className="hero__glow"></div>
             <img
-              src="/images/profile/ashish2.png"
+              src="/images/profile/ashish2.webp"
               alt="Ashish Chauhan"
               className="hero__image"
              

@@ -7,7 +7,7 @@ const projects = [
     title: "Todo App",
     description:
       "Full stack todo app with authentication, CRUD operations, and real-time updates.",
-    image: "/images/project/todo.png",
+    image: "/images/project/todo.webp",
     tags: ["Next.js", "TypeScript", "jwt", "Vercel"],
     link: "https://todo-app-six-chi-78.vercel.app/",
   },
@@ -16,7 +16,7 @@ const projects = [
     title: "E-Commerce",
     description:
       "Dynamic e-commerce website with product browsing, filtering and responsive UI.",
-    image: "/images/project/ecom.png",
+    image: "/images/project/ecom.webp",
     tags: ["React", "Node.js", "MongoDB", "Express.js"],
     link: "https://react-dynamic-e-com-zcpx.vercel.app/",
   },
@@ -25,7 +25,7 @@ const projects = [
     title: "Personal Portfolio",
     description:
       "My personal portfolio built with React and SCSS.",
-    image: "/images/project/portfolio.png",
+    image: "/images/project/portfolio.webp",
     tags: ["Next.js", "React", "TypeScript", "React Icons"],
     link: "https://ashishchauhan.tech/",
   },
