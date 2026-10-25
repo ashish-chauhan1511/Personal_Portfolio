@@ -89,7 +89,7 @@ const Hero = () => {
               src="/images/profile/ashish2.png"
               alt="Ashish Chauhan"
               className="hero__image"
-              loading="lazy"
+             
             />
             <span className="hero__dot hero__dot--one"></span>
             <span className="hero__dot hero__dot--two"></span>
