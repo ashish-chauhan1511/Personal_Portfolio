@@ -293,6 +293,11 @@
     }
     &__image {
       height: calc(100% + 45px);
+      width: 100%;
+      max-width: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
     }
     &__circle--one {
       width: 340px;
