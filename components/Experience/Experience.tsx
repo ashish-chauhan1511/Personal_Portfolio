@@ -30,7 +30,7 @@ const Experience = () => {
               </span>
 
               <small>
-                (1.8+ Years)
+                (2+ Years)
               </small>
             </div>
 
