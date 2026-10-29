@@ -4,6 +4,15 @@ import "./Projects.scss";
 const projects = [
   {
     id: 1,
+    title: "Typing-Test",
+    description:
+      "Typing speed test application with real-time WPM, accuracy tracking and English-Hindi support",
+    image: "/images/project/typing-test.webp",
+    tags: ["Next.js", "React", "TypeScript", "SCSS"],
+    link: "https://typingtest-fawn.vercel.app/",
+  },
+  {
+    id: 2,
     title: "Todo App",
     description:
       "Full stack todo app with authentication, CRUD operations, and real-time updates.",
@@ -11,15 +20,7 @@ const projects = [
     tags: ["Next.js", "TypeScript", "jwt", "Vercel"],
     link: "https://todo-app-six-chi-78.vercel.app/",
   },
-  {
-    id: 2,
-    title: "E-Commerce",
-    description:
-      "Dynamic e-commerce website with product browsing, filtering and responsive UI.",
-    image: "/images/project/ecom.webp",
-    tags: ["React", "Node.js", "MongoDB", "Express.js"],
-    link: "https://react-dynamic-e-com-zcpx.vercel.app/",
-  },
+  
   {
     id: 3,
     title: "Personal Portfolio",
